@@ -1,0 +1,11 @@
+<div class="home-container">
+  <mat-list role="list">
+    @if(users | async; as users){
+      @for (user of users; track user.id) {
+      <mat-list-item role="listitem">
+        {{ user.name }} - ({{ user.email }})
+      </mat-list-item>
+      }
+    }
+  </mat-list>
+</div>

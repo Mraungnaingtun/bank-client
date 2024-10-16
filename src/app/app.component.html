@@ -1,0 +1,25 @@
+<main class="main">
+  <div class="content">
+    <mat-toolbar class="sticky-toolbar custom-toolbar">
+      <!-- <img src="assets/portfolio2.svg" alt="logo"> -->
+      <span style="padding-left: 10px;">Bank</span>
+      <span class="spacer"></span>
+      <mat-menu #menu>
+        <a mat-menu-item *ngFor="let item of menuItems" [href]="item.link">
+          <div class="mat-body-medium">{{ item.label }}</div>
+        </a>
+      </mat-menu>
+
+      <div class="menu-items">
+        <a mat-button *ngFor="let item of menuItems" [href]="item.link">
+          <div class="mat-body-medium">{{ item.label }}</div>
+        </a>
+      </div>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+  </div>
+</main>
+<router-outlet />

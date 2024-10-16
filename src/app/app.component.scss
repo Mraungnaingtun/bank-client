@@ -1,0 +1,22 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+  
+  .menu-items {
+    display: flex;
+    margin-left: auto;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-items {
+        display: none;
+    }
+  
+    .menu-button {
+        display: block;
+    }
+  }
